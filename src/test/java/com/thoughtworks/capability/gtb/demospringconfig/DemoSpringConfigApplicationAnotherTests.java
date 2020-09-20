@@ -23,7 +23,7 @@ public class DemoSpringConfigApplicationAnotherTests {
     private int levelNumber;
 
     @Test
-    void shouldGetBothMainAndTestProperties() {
+    void shouldGetAnotherTestPropertiesAsNegativeOne() {
         Assertions.assertEquals(-1, levelNumber);
     }
 

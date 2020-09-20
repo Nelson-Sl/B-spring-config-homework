@@ -23,7 +23,7 @@ class DemoSpringConfigApplicationTests {
 	private int levelNumber;
 
 	@Test
-	void shouldGetBothMainAndTestProperties() {
+	void shouldGetTestPropertiesAsOne() {
 		Assertions.assertEquals(1, levelNumber);
 	}
 
