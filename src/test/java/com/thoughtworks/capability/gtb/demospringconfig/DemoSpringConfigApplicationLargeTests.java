@@ -14,8 +14,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@ActiveProfiles("anotherTest")
-public class DemoSpringConfigApplicationAnotherTests {
+@ActiveProfiles("largeTest")
+public class DemoSpringConfigApplicationLargeTests {
     @Autowired
     private MockMvc mockMvc;
 
@@ -23,15 +23,15 @@ public class DemoSpringConfigApplicationAnotherTests {
     private int levelNumber;
 
     @Test
-    void shouldGetAnotherTestPropertiesAsNegativeOne() {
-        Assertions.assertEquals(-1, levelNumber);
+    void shouldGetTestPropertiesAsOne() {
+        Assertions.assertEquals(3, levelNumber);
     }
 
     @Test
-    void shouldBeBasicWhenLevelNumLessThanOne() throws Exception {
+    void shouldBeAdvancedWhenLevelNumLargerThanOne() throws Exception {
         String result = mockMvc.perform(get("/level"))
                 .andExpect(status().isOk())
                 .andReturn().getResponse().getContentAsString();
-        Assertions.assertEquals("basic", result);
+        Assertions.assertEquals("advanced", result);
     }
 }
