@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(properties = {"levelNumber: 3"})
 @AutoConfigureMockMvc
-class DemoSpringConfigApplicationTests {
+class DemoSpringConfigApplicationLargeTests {
 	@Autowired
 	private MockMvc mockMvc;
 
